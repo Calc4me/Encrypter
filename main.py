@@ -12,14 +12,14 @@ def scramble(n):
      #Not space
      else:
           return 156 - n
-#Paste message in preset
+#Paste message in preset if you can't paste into the shell
 preset = ""
 values = []
 #Input
-usepreset = input("Use preset? (y/n) ")
+usepreset = input("Use preset? (y/n) ").lower()
 if usepreset == "y":
   message = preset
-elif usepreset == "n":
+else:
   message = input("Message: ")
 #Put into values
 for i in range(len(message)):
